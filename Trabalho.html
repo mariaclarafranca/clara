@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Idade</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="#" onclick="selecMenu('minima')">Idade Mínima de Namoro</a></li>
+            <li><a href="#" onclick="selecMenu('maxima')">Idade Máxima de Namoro</a></li>
+            <li><a href="#" onclick="selecMenu('comparativo')">Comparativo de Idades</a></li>
+            <li><a href="#" onclick="selecMenu('trisal')">Comparativo de Idades do Trisal</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container" id="minima" style="display: none;">
+        <h1>Cálculo da Idade Mínima para Namorar</h1>    
+        <form id="calcIdadeMinima" name="calcIdadeMinima">
+            <label for="idadeMinima">Informe sua idade:</label>
+            <input type="number" id="idadeMinima" name="idadeMinima">
+            <label>
+                <input type="radio" name="unidadeMinima" value="anos" checked> Anos
+            </label>
+            <label>
+                <input type="radio" name="unidadeMinima" value="meses"> Meses
+            </label>
+            <input type="submit" value="Calcular" onclick="calculaIdadeMinima(event)">
+        </form>
+        <div id="resultMinima"></div>
+    </div>
+
+    <div class="container" id="maxima" style="display: none;">
+        <h1>Cálculo da Idade Máxima para Namorar</h1>    
+        <form id="calcIdadeMaxima" name="calcIdadeMaxima">
+            <label for="idadeMaxima">Informe sua idade:</label>
+            <input type="number" id="idadeMaxima" name="idadeMaxima">
+            <label>
+                <input type="radio" name="unidadeMaxima" value="anos" checked> Anos
+            </label>
+            <label>
+                <input type="radio" name="unidadeMaxima" value="meses"> Meses
+            </label>
+            <input type="submit" value="Calcular" onclick="calculaIdadeMaxima(event)">
+        </form>
+        <div id="resultMaxima"></div>
+    </div>
+
+    <div class="container" id="comparativo" style="display: none;">
+        <h1>Comparativo de Idades para Namorar</h1>    
+        <form id="calcIdadeComparativo" name="calcIdadeComparativo">
+            <label for="idade1">Informe sua idade:</label>
+            <input type="number" id="idade1" name="idade1">
+            <label>
+                <input type="radio" name="unidadeComparativo1" value="anos" checked> Anos
+            </label>
+            <label>
+                <input type="radio" name="unidadeComparativo1" value="meses"> Meses
+            </label>
+            <label for="idade2">Informe a idade do parceiro(a):</label>
+            <input type="number" id="idade2" name="idade2">
+            <label>
+                <input type="radio" name="unidadeComparativo2" value="anos" checked> Anos
+            </label>
+            <label>
+                <input type="radio" name="unidadeComparativo2" value="meses"> Meses
+            </label>
+            <input type="submit" value="Comparar" onclick="comparaIdades(event)">
+        </form>
+        <div id="resultComparativo"></div>
+    </div>
+
+    <div class="container" id="trisal" style="display: none;">
+        <h1>Comparativo de Idade do Trisal</h1>    
+        <form id="calcIdadeTrisal" name="calcIdadeTrisal">
+            <label for="idadeTri1">Informe sua idade:</label>
+            <input type="number" id="idadeTri1" name="idadeTri1">
+            <label>
+                <input type="radio" name="unidadeTrisal1" value="anos" checked> Anos
+            </label>
+            <label>
+                <input type="radio" name="unidadeTrisal1" value="meses"> Meses
+            </label>
+            <label for="idadeTri2">Informe a idade do primeiro parceiro(a):</label>
+            <input type="number" id="idadeTri2" name="idadeTri2">
+            <label>
+                <input type="radio" name="unidadeTrisal2" value="anos" checked> Anos
+            </label>
+            <label>
+                <input type="radio" name="unidadeTrisal2" value="meses"> Meses
+            </label>
+            <label for="idadeTri3">Informe a idade do segundo parceiro(a):</label>
+            <input type="number" id="idadeTri3" name="idadeTri3">
+            <label>
+                <input type="radio" name="unidadeTrisal3" value="anos" checked> Anos
+            </label>
+            <label>
+                <input type="radio" name="unidadeTrisal3" value="meses"> Meses
+            </label>
+            <input type="submit" value="Comparar" onclick="comparaIdadeTrisal(event)">
+        </form>
+        <div id="resultTrisal"></div>
+    </div>
+    
+</body>
+</html>
